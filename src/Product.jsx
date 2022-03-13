@@ -14,6 +14,16 @@ class Product extends Component{
          return ( this.state.count<5?"text-primary":"text-danger"
     
              )    }
+    renderNames(){
+        if(this.state.names.length===0){
+            return <h2>No names </h2>
+        }else{
+            return(
+                this.state.names.map(item=> ( 
+                <li key={item}>{item}</li>))
+            )
+        }
+    }
     render(){
         // const classes =this.state.count<5?"text-primary":"text-danger"
         return(
@@ -21,9 +31,7 @@ class Product extends Component{
             <img src={this.state.imgURL} alt="" />
             <h1  className={this.getclass()}>{this.state.name}</h1>
             <ul>
-                {this.state.names.map(item=> ( 
-                     <li key={item}>{item}</li>
-                     ))}
+               {this.renderNames()}
             </ul>
         </div>
         );
