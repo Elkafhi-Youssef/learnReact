@@ -1,0 +1,8 @@
+class childclass extends ParentClass {
+
+    state = {}
+
+    render(){
+        
+    }
+}
