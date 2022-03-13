@@ -35,15 +35,19 @@ class Product extends Component{
         // const classes =this.state.count<5?"text-primary":"text-danger"
        
         return(
-        <div>
-            {this.props.children}
-            <h1  className={this.getclass()}>{this.state.name} {this.state.count}</h1>
+            <div className='row'>
+
+          <div className='col'>
+           
+            <span className= {this.getclass()}>{this.state.name} {this.state.count}</span>
             {/* <ul>
                {this.renderNames()}
             </ul> */}
             <button onClick={()=>this.handler(2)} className='btn btn-primary btn-sm'>+</button>
+            <button className='btn btn-danger p-1 m-2'>remove</button>
             {/* you  don't  call a function just put reference   */}
         </div>
+            </div>
         );
     }
 }
