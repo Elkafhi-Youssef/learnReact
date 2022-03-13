@@ -5,10 +5,10 @@ import React, { Component } from 'react'
 class Product extends Component{
 
     state = {
-        name:'youssef',
-        count:2,
-        imgURL:"logo192.png",
-        names: ['youssef','jamila','zaynab']
+        name:this.props.product.name,
+        count:this.props.product.count,
+        
+        // names: ['youssef','jamila','zaynab']
     }
     getclass(){
          return ( this.state.count<5?"text-primary":"text-danger"
@@ -33,12 +33,13 @@ class Product extends Component{
     // }
     render(){
         // const classes =this.state.count<5?"text-primary":"text-danger"
+       
         return(
         <div>
             <h1  className={this.getclass()}>{this.state.name} {this.state.count}</h1>
-            <ul>
+            {/* <ul>
                {this.renderNames()}
-            </ul>
+            </ul> */}
             <button onClick={()=>this.handler(2)} className='btn btn-primary btn-sm'>+</button>
             {/* you  don't  call a function just put reference   */}
         </div>

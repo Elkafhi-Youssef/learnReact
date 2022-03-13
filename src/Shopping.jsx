@@ -6,7 +6,7 @@ class Shopping extends Component{
         product:[
             {id:1,name:"buger",count:1},
             {id:2,name:"buger1",count:3},
-            {id:1,name:"buger2",count:5},
+            {id:3,name:"buger2",count:5},
         ]
     }
     render(){
@@ -14,7 +14,9 @@ class Shopping extends Component{
             <React.Fragment>
             <div>
                 <h1>Shopping</h1>
-                <Product/>
+                {this.state.product.map(product =>(
+                    <Product key={product.id} product={product}/>
+                ))}
             </div>
             </React.Fragment>
         );
