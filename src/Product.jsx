@@ -4,28 +4,28 @@ import React, { Component } from 'react'
 
 class Product extends Component{
 
-    state = {
-        name:this.props.product.name,
-        count:this.props.product.count,
+    // state = {
+    //     name:this.props.product.name,
+    //     count:this.props.product.count,
         
-        // names: ['youssef','jamila','zaynab']
-    }
+    //     // names: ['youssef','jamila','zaynab']
+    // }
     getclass(){
-         return ( this.state.count<5?"text-primary":"text-danger"
+         return ( this.props.product.count<5?"text-primary":"text-danger"
     
              )    }
     renderNames(){
-        if(this.state.names.length===0){
+        if(this.props.names.length===0){
             return <h2>No names </h2>
         }else{
             return(
-                this.state.names.map(item=> ( 
+                this.props.names.map(item=> ( 
                 <li key={item}>{item}</li>))
             )
         }
     }
     handler=(val)=>{
-      this.setState({count:this.state.count+val})
+      this.setState({count:this.props.count+val})
     }
     // 1.
     // increment = ()=>{
@@ -39,7 +39,7 @@ class Product extends Component{
 
           <div className='col'>
            
-            <span className= {this.getclass()}>{this.state.name} {this.state.count}</span>
+            <span className= {this.getclass()}>{this.props.product.name} {this.props.product.count}</span>
             {/* <ul>
                {this.renderNames()}
             </ul> */}

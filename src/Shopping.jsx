@@ -17,11 +17,24 @@ class Shopping extends Component{
         this.setState({product:newProducts})
         
     }
+    handleReset=()=>{
+        //Clone
+        let products = [...this.state.product]
+        console.log(products);
+        // Edite
+        products = products.map(p=>{p.count=0
+        return p})
+        console.log(products);
+        // Set state
+        this.setState({product:products})
+        
+    }
     render(){
         return(
             <React.Fragment>
             <div>
                 <h1>Shopping</h1>
+                <button onClick={this.handleReset} className='btn btn-primary btn-sm'>reset</button>
                 {this.state.product.map(product =>(
                     <Product onDelete={this.handleDelete} key={product.id} product={product}/>
                         
