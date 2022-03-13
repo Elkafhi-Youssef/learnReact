@@ -24,6 +24,9 @@ class Product extends Component{
             )
         }
     }
+    handler=()=>{
+      console.log(this);
+    }
     render(){
         // const classes =this.state.count<5?"text-primary":"text-danger"
         return(
@@ -33,6 +36,8 @@ class Product extends Component{
             <ul>
                {this.renderNames()}
             </ul>
+            <button onClick={this.handler} className='btn btn-primary btn-sm'>+</button>
+            {/* you  don't  call a function just put reference   */}
         </div>
         );
     }
