@@ -24,9 +24,13 @@ class Product extends Component{
             )
         }
     }
-    handler=()=>{
-      this.setState({count:this.state.count+1})
+    handler=(val)=>{
+      this.setState({count:this.state.count+val})
     }
+    // 1.
+    // increment = ()=>{
+    //     this.handler(2)
+    // }
     render(){
         // const classes =this.state.count<5?"text-primary":"text-danger"
         return(
@@ -36,7 +40,7 @@ class Product extends Component{
             <ul>
                {this.renderNames()}
             </ul>
-            <button onClick={this.handler} className='btn btn-primary btn-sm'>+</button>
+            <button onClick={()=>this.handler(2)} className='btn btn-primary btn-sm'>+</button>
             {/* you  don't  call a function just put reference   */}
         </div>
         );
@@ -55,4 +59,11 @@ export default Product;
 // updating state 
 //  === 
 //this.state({namestate: value})
+//  ===
+
+// passing argument to an event handler 
+// ===
+//1. create a new function for calling a  function and give him a rapametres 
+//2.this.namefunctionn.bind(this,2)
+//3.()=>this.namefunctionn(argument))
 //  ===
