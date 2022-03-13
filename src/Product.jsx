@@ -44,7 +44,7 @@ class Product extends Component{
                {this.renderNames()}
             </ul> */}
             <button onClick={()=>this.handler(2)} className='btn btn-primary btn-sm'>+</button>
-            <button className='btn btn-danger p-1 m-2'>remove</button>
+            <button onClick={()=>this.props.onDelete(this.props.product)} className='btn btn-danger p-1 m-2'>remove</button>
             {/* you  don't  call a function just put reference   */}
         </div>
             </div>
@@ -66,7 +66,7 @@ export default Product;
 //this.state({namestate: value})
 //  ===
 
-// passing argument to an event handler 
+//--------> passing argument to an event handler 
 // ===
 //1. create a new function for calling a  function and give him a rapametres 
 //2.this.namefunctionn.bind(this,2)
