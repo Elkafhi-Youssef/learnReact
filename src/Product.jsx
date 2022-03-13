@@ -25,14 +25,14 @@ class Product extends Component{
         }
     }
     handler=()=>{
-      console.log(this);
+      this.setState({count:this.state.count+1})
     }
     render(){
         // const classes =this.state.count<5?"text-primary":"text-danger"
         return(
         <div>
             <img src={this.state.imgURL} alt="" />
-            <h1  className={this.getclass()}>{this.state.name}</h1>
+            <h1  className={this.getclass()}>{this.state.name} {this.state.count}</h1>
             <ul>
                {this.renderNames()}
             </ul>
@@ -51,3 +51,8 @@ export default Product;
 // arrayName.map(currentvalue=>return)
 // true && string return string
 // false && string return false
+
+// updating state 
+//  === 
+//this.state({namestate: value})
+//  ===
