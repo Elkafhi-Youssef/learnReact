@@ -35,7 +35,6 @@ class Product extends Component{
         // const classes =this.state.count<5?"text-primary":"text-danger"
         return(
         <div>
-            <img src={this.state.imgURL} alt="" />
             <h1  className={this.getclass()}>{this.state.name} {this.state.count}</h1>
             <ul>
                {this.renderNames()}
