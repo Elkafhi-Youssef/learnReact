@@ -36,6 +36,7 @@ class Product extends Component{
        
         return(
         <div>
+            {this.props.children}
             <h1  className={this.getclass()}>{this.state.name} {this.state.count}</h1>
             {/* <ul>
                {this.renderNames()}
