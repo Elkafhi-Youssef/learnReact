@@ -9,12 +9,16 @@ class Product extends Component{
         count:2,
         imgURL:"logo192.png"
     }
+    getclass(){
+         return ( this.state.count<5?"text-primary":"text-danger"
+    
+             )    }
     render(){
-        const classes =this.state.count<5?"text-primary":"text-danger"
+        // const classes =this.state.count<5?"text-primary":"text-danger"
         return(
         <div>
             <img src={this.state.imgURL} alt="" />
-            <h1  className={classes}>{this.state.name}</h1>
+            <h1  className={this.getclass()}>{this.state.name}</h1>
         </div>
         );
     }
