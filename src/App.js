@@ -1,11 +1,11 @@
 import './App.css';
 import Product from './Product';
+import Shopping from './Shopping';
 
 function App() {
   return (
     <div>
-      <Product/>
-    <h1>hi</h1>
+      <Shopping/>
     </div>
     
   );
