@@ -44,3 +44,5 @@ export default Product;
 // syntax of add style in tag :style={{color:"red"}}
 
 // arrayName.map(currentvalue=>return)
+// true && string return string
+// false && string return false
