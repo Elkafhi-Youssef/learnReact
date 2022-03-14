@@ -43,7 +43,7 @@ class Product extends Component{
             {/* <ul>
                {this.renderNames()}
             </ul> */}
-            <button onClick={()=>this.handler(2)} className='btn btn-primary btn-sm'>+</button>
+            <button onClick={()=>this.props.onIncrement(this.props.product)} className='btn btn-primary btn-sm'>+</button>
             <button onClick={()=>this.props.onDelete(this.props.product)} className='btn btn-danger p-1 m-2'>remove</button>
             {/* you  don't  call a function just put reference   */}
         </div>
@@ -72,3 +72,6 @@ export default Product;
 //2.this.namefunctionn.bind(this,2)
 //3.()=>this.namefunctionn(argument))
 //  ===
+//------->Deep clone objects to maintain increment function
+// here just we don't have any state so increment function not working 
+// so what the solution ?
