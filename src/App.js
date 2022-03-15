@@ -1,6 +1,6 @@
 import './App.css';
-import Product from './Product';
-import Shopping from './Shopping';
+import Product from './components/Product';
+import Shopping from './components/Shopping';
 
 function App() {
   return (
