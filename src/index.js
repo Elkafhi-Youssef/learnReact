@@ -12,4 +12,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// her we use this file for render component into the DOM 
+// her we use this file for render component into the DOM  
+
