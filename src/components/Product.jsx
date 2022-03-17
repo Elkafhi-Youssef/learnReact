@@ -47,6 +47,9 @@ class Product extends Component{
             <button onClick={()=>this.props.onDelete(this.props.product)} className='btn btn-danger p-1 m-2'>remove</button>
             {/* you  don't  call a function just put reference   */}
         </div>
+            <div className='text-yellow-400'>
+                <h1>hi every one</h1>
+            </div>
             </div>
         );
     }
