@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Product from './Product';
 
+
 class Shopping extends Component{
     state = {
         product:[
@@ -42,6 +43,7 @@ class Shopping extends Component{
     render(){
         return(
             <React.Fragment>
+                
             <div>
                 <h1>Shopping</h1>
                 <button onClick={this.handleReset} className='btn btn-primary btn-sm'>reset</button>

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* create class and give him  classes from tailwand */
+.customBtn {
+  @apply Obg-purple;
+  @apply shadoW-md;
+}
