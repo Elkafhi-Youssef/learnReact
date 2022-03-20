@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
 class Navbar extends Component{
-
-
-
     render(){
         // const classes =this.state.count<5?"text-primary":"text-danger"
        
